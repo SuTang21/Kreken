@@ -1,6 +1,6 @@
 # Kreken
 
-This is a python CLI that runs a proxy server intercepting password hashes
+This is a python CLI that runs a proxy server intercepting password hash queries to HIBP database.
 
 ### Installation
 _For MacOS_
@@ -71,7 +71,7 @@ Right-click on certificate to open 'Get Info' and under 'Trust', change the 'Whe
 
 #### 3. Download database
 
-Download database (sorry it's massive - 2.25GB) from here: . Move database into the 'data' folder of the working directory.
+Download database (sorry it's massive - 2.25GB) from here: https://drive.google.com/drive/folders/1NGWSbVX4Iqp4T60o8BAnjiqphBTj9xDD?usp=sharing. Move database into the 'data' folder of the working directory.
 
 #### 4. (Finally) Run Kreken
 
@@ -89,4 +89,7 @@ To test, open a new terminal and run:
 curl -x https://127.0.0.1:8080 /https:api.pwnedpasswords.range/{first 5 characters of any SHA1}
 ```
 
-### Details
+### Structure
+_Proxy.py_ - Set up mitmproxy server and listen to queries to HIBP API.
+_Data.py_ - Process SecList text files into SQLite database.
+_Kreken.py_ - Handles database querying
