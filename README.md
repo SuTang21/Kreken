@@ -1,6 +1,6 @@
 # Kreken
 
-This is a python CLI that runs a proxy server intercepting password hashes 
+This is a python CLI that runs a proxy server intercepting password hashes
 
 ### Installation
 _For MacOS_
@@ -89,4 +89,4 @@ To test, open a new terminal and run:
 curl -x https://127.0.0.1:8080 /https:api.pwnedpasswords.range/{first 5 characters of any SHA1}
 ```
 
-#### Details
+### Details
