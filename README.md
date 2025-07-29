@@ -26,6 +26,8 @@ Proxy runs locally on port 8080, to configure go to: Settings > Network > WiFi D
 Sever: 127.0.0.1
 Port: 8080
 ```
+<img width="704" height="461" alt="Screenshot 2025-07-29 at 2 01 58 pm" src="https://github.com/user-attachments/assets/2eca57d2-c36f-42cc-a25d-b42a27143026" />
+
 Or use run command in terminal:
 ```bash
 INTERFACE="Wi-Fi"                   
@@ -57,13 +59,15 @@ To test `mitmproxy` is installed properly, run the following command in same pyt
 mitmproxy
 ```
 While proxy is running, visit 'http://mitm.it' in browser. If proxy is configured properly, this should show up:
+<img width="865" height="853" alt="Screenshot 2025-07-29 at 2 24 49 pm" src="https://github.com/user-attachments/assets/24f60cc5-2f65-451f-8c7f-ce30a4d783bb" />
 
 Download certificate according to your system and once downloaded, change the extension of the certificate to '.crt'. 
 
 Open up Keychain Access (Apple) and add certificate under System keychains.
+<img width="870" height="519" alt="Screenshot 2025-07-29 at 2 25 58 pm" src="https://github.com/user-attachments/assets/2117451a-d35e-4603-9f65-e265a6aeaaf4" />
 
 Right-click on certificate to open 'Get Info' and under 'Trust', change the 'When using this certificate' value to 'Always Trust'.
-
+<img width="508" height="426" alt="Screenshot 2025-07-29 at 2 27 16 pm" src="https://github.com/user-attachments/assets/925ab5e8-558d-4040-be76-b2492b1d7a07" />
 
 #### 3. Download database
 
@@ -78,12 +82,11 @@ Run:
 python3 proxy.py
 ```
 Which should show something like this:
+<img width="993" height="557" alt="Screenshot 2025-07-29 at 2 28 23 pm" src="https://github.com/user-attachments/assets/78a1846a-bfb2-41cd-af0d-9e3f3d71c159" />
 
 To test, open a new terminal and run:
 ```bash
 curl -x https://127.0.0.1:8080 /https:api.pwnedpasswords.range/{first 5 characters of any SHA1}
 ```
-and something like this would be showing up:
-
 
 #### Details
