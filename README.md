@@ -64,8 +64,26 @@ Open up Keychain Access (Apple) and add certificate under System keychains.
 
 Right-click on certificate to open 'Get Info' and under 'Trust', change the 'When using this certificate' value to 'Always Trust'.
 
-#### 2. Run mitmproxy
 
-Install `mitmproxy` (https://mitmproxy.org/) into python virtual environment folder.
+#### 3. Download database
+
+Download database (sorry it's massive - 2.25GB) from here: . Move database into the 'data' folder of the working directory.
+
+#### 4. (Finally) Run Kreken
+
+Ensure HTTP/HTTPS are set to use 127.0.0.1:8080, path is in working directory and python virtual environment is activated.
+
+Run:
+```text
+python3 proxy.py
+```
+Which should show something like this:
+
+To test, open a new terminal and run:
+```bash
+curl -x https://127.0.0.1:8080 /https:api.pwnedpasswords.range/{first 5 characters of any SHA1}
+```
+and something like this would be showing up:
+
 
 #### Details
