@@ -90,6 +90,6 @@ curl -x https://127.0.0.1:8080 /https:api.pwnedpasswords.range/{first 5 characte
 ```
 
 ### Structure
-_Proxy.py_ - Set up mitmproxy server and listen to queries to HIBP API.
-_Data.py_ - Process SecList text files into SQLite database.
-_Kreken.py_ - Handles database querying
+- _Proxy.py_ - Set up mitmproxy server and listen to queries to HIBP API.
+- _Data.py_ - Process SecList text files into SQLite database.
+- _Kreken.py_ - Handles database querying
