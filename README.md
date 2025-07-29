@@ -2,6 +2,8 @@
 
 This is a python CLI that runs a proxy server intercepting password hash queries to HIBP database and returns a list plaintext mapping of the hashed suffixes HIBP returns. So the qeuried password might be in there somewhere ...
 
+https://github.com/user-attachments/assets/2648d895-ace2-4737-b187-a1651a92d2c5
+
 ### Installation
 _For MacOS_
 
